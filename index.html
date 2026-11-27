@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>局部特写_微距摄影与细节观察_局部特写影像志</title>
+<meta name="description" content="局部特写聚焦微距摄影与细节观察，收录花瓣脉络、金属锈蚀、织物纹理等微观影像条目，提供器材参数、拍摄方法、光线判断与作品点评，适合微距爱好者与视觉创作者查阅。">
+<meta name="keywords" content="微距摄影,细节观察,纹理影像,微观世界,拍摄参数">
+<style>
+:root{
+  --bg:#0e1013;
+  --bg-soft:#15181d;
+  --panel:#1a1e25;
+  --panel-2:#21262f;
+  --line:#2c323d;
+  --line-soft:#232830;
+  --text:#e8e6e1;
+  --text-dim:#a2a8b3;
+  --text-mute:#767d89;
+  --accent:#d9a441;
+  --accent-soft:#8a6a2a;
+  --accent-2:#5fa8a0;
+  --danger:#c96a5a;
+  --radius:10px;
+  --radius-sm:6px;
+  --shadow:0 8px 28px rgba(0,0,0,.38);
+  --maxw:1320px;
+  --sticky-h:104px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-h) + 12px)}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--font);font-size:15px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .9em;padding-left:1.2em}
+li{margin-bottom:.35em}
+button{font-family:inherit}
+
+/* ============ 吸顶公告条 + 页头 ============ */
+.sticky-wrap{position:sticky;top:0;z-index:60}
+.notice-bar{
+  background:linear-gradient(90deg,#2a2118,#3a2c1a 60%,#2a2118);
+  border-bottom:1px solid var(--accent-soft);
+  font-size:13px;color:#eadcc0;
+}
+.notice-inner{
+  max-width:var(--maxw);margin:0 auto;padding:7px 20px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.notice-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 3px rgba(217,164,65,.18);flex:none;
+}
+.notice-inner b{color:#f6e6c4;font-weight:600}
+.notice-inner a{margin-left:auto;color:var(--accent);font-weight:600;white-space:nowrap}
+.notice-inner a:hover{text-decoration:underline}
+
+.site-header{
+  background:rgba(17,20,25,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:11px;flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.06em}
+.brand-sub{font-size:10.5px;color:var(--text-mute);letter-spacing:.22em}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.main-nav a{
+  padding:6px 11px;border-radius:var(--radius-sm);font-size:14px;
+  color:var(--text-dim);transition:.16s;white-space:nowrap;
+}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--panel-2);color:var(--text);outline:none}
+.header-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search-box{
+  display:flex;align-items:center;background:var(--panel);
+  border:1px solid var(--line);border-radius:20px;padding:3px 6px 3px 13px;
+}
+.search-box input{
+  background:none;border:0;color:var(--text);font-size:13.5px;
+  width:132px;padding:5px 0;outline:none;
+}
+.search-box input::placeholder{color:var(--text-mute)}
+.search-box button{
+  background:var(--accent);border:0;color:#1a1305;font-size:12.5px;font-weight:700;
+  border-radius:16px;padding:5px 12px;cursor:pointer;
+}
+.search-box button:hover{background:#e6b453}
+.btn-ghost{
+  border:1px solid var(--line);background:var(--panel);color:var(--text-dim);
+  padding:6px 13px;border-radius:18px;font-size:13px;cursor:pointer;transition:.16s;
+}
+.btn-ghost:hover{border-color:var(--accent-soft);color:var(--accent)}
+
+/* ============ 首屏 ============ */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(1100px 420px at 82% -18%,rgba(217,164,65,.13),transparent 62%),
+    radial-gradient(760px 340px at 6% 118%,rgba(95,168,160,.10),transparent 64%),
+    var(--bg-soft);
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:52px 20px 46px;
+  display:grid;grid-template-columns:1.06fr .94fr;gap:46px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.2em;
+  color:var(--accent);border:1px solid var(--accent-soft);border-radius:20px;
+  padding:4px 13px;margin-bottom:20px;
+}
+.hero h1{
+  font-size:clamp(34px,5vw,54px);letter-spacing:.04em;margin-bottom:16px;
+  background:linear-gradient(100deg,#f7f2e7 30%,#d9a441 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-desc{font-size:16px;color:var(--text-dim);max-width:30em;margin-bottom:22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.btn-primary{
+  background:var(--accent);color:#1a1305;font-weight:700;font-size:14.5px;
+  padding:10px 22px;border-radius:24px;border:0;cursor:pointer;transition:.16s;
+}
+.btn-primary:hover{background:#e6b453;transform:translateY(-1px)}
+.btn-outline{
+  background:transparent;color:var(--text);border:1px solid var(--line);
+  padding:10px 22px;border-radius:24px;font-size:14.5px;cursor:pointer;transition:.16s;
+}
+.btn-outline:hover{border-color:var(--accent-soft);color:var(--accent)}
+.hero-stats{display:flex;gap:30px;flex-wrap:wrap}
+.hero-stats div{display:flex;flex-direction:column}
+.hero-stats b{font-size:22px;color:var(--accent);letter-spacing:.02em}
+.hero-stats span{font-size:12px;color:var(--text-mute);letter-spacing:.08em}
+
+.hero-visual{position:relative}
+.hero-frame{
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:var(--panel);box-shadow:var(--shadow);position:relative;
+}
+.hero-frame img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;filter:saturate(1.05) contrast(1.04)}
+.hero-frame::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(150deg,transparent 52%,rgba(14,16,19,.72));
+  pointer-events:none;
+}
+.hero-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:16px 18px;z-index:2;
+}
+.hero-caption b{display:block;font-size:15px;color:#f3ecdd}
+.hero-caption span{font-size:12px;color:var(--text-dim);letter-spacing:.06em}
+.hero-tag{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:rgba(14,16,19,.78);border:1px solid var(--accent-soft);
+  color:var(--accent);font-size:11.5px;letter-spacing:.16em;
+  padding:3px 10px;border-radius:14px;
+}
+.hero-grid-mini{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px;
+}
+.hero-grid-mini img{
+  width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-sm);
+  border:1px solid var(--line);
+}
+
+/* ============ 布局：三栏门户 ============ */
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:34px 20px 60px;
+  display:grid;grid-template-columns:176px minmax(0,1fr) 252px;gap:32px;
+  align-items:start;
+}
+.col-side{position:sticky;top:calc(var(--sticky-h) + 16px)}
+.side-title{
+  font-size:11.5px;letter-spacing:.2em;color:var(--text-mute);
+  margin-bottom:12px;font-weight:600;
+}
+.channel-list{list-style:none;padding:0;margin:0 0 26px}
+.channel-list li{margin:0 0 2px}
+.channel-list a{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:7px 10px;border-radius:var(--radius-sm);font-size:13.8px;
+  color:var(--text-dim);border-left:2px solid transparent;transition:.15s;
+}
+.channel-list a:hover{background:var(--panel);color:var(--text);border-left-color:var(--accent)}
+.channel-list em{font-size:11px;color:var(--text-mute);font-style:normal}
+.side-note{
+  border:1px solid var(--line);border-radius:var(--radius);padding:14px;
+  background:var(--panel);font-size:12.5px;color:var(--text-dim);line-height:1.7;
+}
+.side-note b{color:var(--accent);display:block;margin-bottom:6px;font-size:13px}
+
+/* ============ 通用板块 ============ */
+.section{margin-bottom:46px;scroll-margin-top:calc(var(--sticky-h) + 14px)}
+.section-head{
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  padding-bottom:11px;margin-bottom:20px;border-bottom:1px solid var(--line);
+}
+.section-head h2{font-size:21px;letter-spacing:.02em}
+.section-head .idx{
+  font-size:12px;color:var(--accent);letter-spacing:.16em;font-weight:600;
+  border:1px solid var(--accent-soft);border-radius:4px;padding:1px 7px;
+}
+.section-head .lead{font-size:13px;color:var(--text-mute);margin-left:auto}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 26px;font-size:14.6px;color:#d3d6dc;
+}
+.overview p:last-child{margin-bottom:0}
+.overview strong{color:var(--accent);font-weight:600}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.18s;
+}
+.card:hover{border-color:var(--accent-soft);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card-img{position:relative;overflow:hidden}
+.card-img img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:.3s}
+.card:hover .card-img img{transform:scale(1.04)}
+.card-type{
+  position:absolute;top:9px;left:9px;background:rgba(14,16,19,.82);
+  color:var(--accent);font-size:11px;letter-spacing:.08em;padding:2px 8px;border-radius:10px;
+  border:1px solid var(--accent-soft);
+}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:15px;margin-bottom:7px}
+.card-body p{font-size:13px;color:var(--text-dim);line-height:1.68;margin-bottom:11px;flex:1}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tag{
+  font-size:11px;color:var(--text-dim);background:var(--panel-2);
+  border:1px solid var(--line-soft);border-radius:4px;padding:1px 7px;
+}
+.card-meta{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:11.5px;color:var(--text-mute);border-top:1px solid var(--line-soft);padding-top:9px;
+}
+.card-meta .hot{color:var(--accent-2)}
+
+/* 动态列表 */
+.update-list{list-style:none;padding:0;margin:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel)}
+.update-list li{
+  display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:baseline;
+  padding:12px 16px;border-bottom:1px solid var(--line-soft);margin:0;font-size:13.6px;
+}
+.update-list li:last-child{border-bottom:0}
+.update-list time{font-size:11.5px;color:var(--text-mute);letter-spacing:.02em}
+.update-list b{color:var(--text);font-weight:600}
+.update-list .u-desc{color:var(--text-dim)}
+.update-list .u-tag{font-size:11px;color:var(--accent-2);white-space:nowrap}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat-item{
+  display:block;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:15px 15px 13px;transition:.16s;
+}
+.cat-item:hover{border-color:var(--accent-soft);background:var(--panel-2)}
+.cat-item b{display:block;font-size:14.5px;margin-bottom:3px;color:var(--text)}
+.cat-item span{font-size:11.5px;color:var(--text-mute)}
+
+/* 深度解析 */
+.article{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 30px;font-size:14.8px;color:#d6d9df;
+}
+.article h3{font-size:17px;color:var(--text);margin:26px 0 11px;padding-left:11px;border-left:3px solid var(--accent)}
+.article h3:first-child{margin-top:0}
+.article ul li::marker{color:var(--accent)}
+.article strong{color:var(--accent);font-weight:600}
+
+/* 体验指南 步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:st}
+.steps li{
+  counter-increment:st;position:relative;padding:16px 18px 16px 58px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:12px;font-size:14px;color:var(--text-dim);
+}
+.steps li::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:18px;top:15px;
+  font-size:15px;font-weight:800;color:var(--accent);letter-spacing:.04em;
+}
+.steps li b{display:block;color:var(--text);margin-bottom:4px;font-size:14.8px}
+
+/* FAQ */
+.faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:10px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:13px 18px;font-size:14.4px;font-weight:600;color:var(--text);
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:18px;font-weight:400;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.faq .faq-body{padding:0 18px 15px;font-size:13.6px;color:var(--text-dim)}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.comment{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;font-size:13.4px;color:var(--text-dim);
+}
+.comment-head{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  display:grid;place-items:center;font-size:11.5px;font-weight:700;color:#141008;
+  background:linear-gradient(135deg,#d9a441,#8a6a2a);
+}
+.comment-head b{font-size:13px;color:var(--text);font-weight:600}
+.comment-head time{font-size:11px;color:var(--text-mute);margin-left:auto}
+.comment p{margin:0}
+
+/* 资讯 */
+.news-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.news-item{
+  display:grid;grid-template-columns:112px 1fr;gap:14px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px;transition:.16s;
+}
+.news-item:hover{border-color:var(--accent-soft)}
+.news-item img{width:112px;height:84px;object-fit:cover;border-radius:var(--radius-sm)}
+.news-item h3{font-size:14px;margin-bottom:5px;line-height:1.45}
+.news-item time{font-size:11px;color:var(--accent);display:block;margin-bottom:4px}
+.news-item p{font-size:12.4px;color:var(--text-dim);margin:0;line-height:1.6}
+
+/* 相关推荐 标签索引 */
+.rel-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rel-tags a{
+  font-size:13px;padding:6px 14px;border-radius:18px;
+  background:var(--panel);border:1px solid var(--line);color:var(--text-dim);transition:.16s;
+}
+.rel-tags a:hover{border-color:var(--accent);color:var(--accent);background:var(--panel-2)}
+
+/* 榜单 */
+.rank-list{list-style:none;padding:0;margin:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel)}
+.rank-list li{
+  display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;
+  padding:11px 16px;border-bottom:1px solid var(--line-soft);margin:0;font-size:13.8px;
+}
+.rank-list li:last-child{border-bottom:0}
+.rank-no{font-weight:800;font-size:14px;color:var(--text-mute);text-align:center}
+.rank-list li:nth-child(-n+3) .rank-no{color:var(--accent)}
+.rank-name b{color:var(--text);font-weight:600}
+.rank-name span{font-size:11.5px;color:var(--text-mute);margin-left:8px}
+.rank-score{font-size:12px;color:var(--accent-2);white-space:nowrap}
+
+/* 右栏 */
+.aside-block{margin-bottom:26px}
+.aside-block h3{
+  font-size:13px;letter-spacing:.14em;color:var(--text-mute);font-weight:600;
+  margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--line);
+}
+.hot-list{list-style:none;padding:0;margin:0}
+.hot-list li{margin:0 0 3px}
+.hot-list a{display:block;padding:8px 10px;border-radius:var(--radius-sm);font-size:13px;color:var(--text-dim);transition:.15s;line-height:1.5}
+.hot-list a:hover{background:var(--panel);color:var(--text)}
+.hot-list a i{font-style:normal;color:var(--accent);font-weight:700;font-size:11.5px;margin-right:7px}
+.aside-timeline{list-style:none;padding:0 0 0 14px;margin:0;border-left:1px solid var(--line)}
+.aside-timeline li{position:relative;margin-bottom:14px;font-size:12.4px;color:var(--text-dim);line-height:1.6}
+.aside-timeline li::before{
+  content:"";position:absolute;left:-19px;top:6px;width:7px;height:7px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 0 3px rgba(217,164,65,.14);
+}
+.aside-timeline b{display:block;color:var(--text);font-size:12.8px;font-weight:600}
+.aside-timeline time{color:var(--text-mute);font-size:11px}
+
+/* 搜索无结果 */
+.no-result{
+  display:none;padding:26px;text-align:center;color:var(--text-mute);
+  border:1px dashed var(--line);border-radius:var(--radius);font-size:14px;
+}
+.no-result.show{display:block}
+
+/* 页尾 */
+.site-footer{
+  background:#0a0c0f;border-top:1px solid var(--line);margin-top:20px;
+}
+.footer-inner{
+  max-width:var(--maxw);margin:0 auto;padding:40px 20px 26px;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;
+}
+.footer-brand .brand{margin-bottom:12px}
+.footer-brand p{font-size:12.8px;color:var(--text-mute);line-height:1.75;max-width:26em}
+.footer-col h4{font-size:12.5px;letter-spacing:.14em;color:var(--text-dim);margin-bottom:12px}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col li{margin-bottom:6px}
+.footer-col a{font-size:13px;color:var(--text-mute);transition:.15s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{
+  border-top:1px solid var(--line-soft);padding:16px 20px;
+  max-width:var(--maxw);margin:0 auto;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:11.8px;color:var(--text-mute);line-height:1.7;
+}
+
+/* ============ 响应式 ============ */
+@media (max-width:1180px){
+  .layout{grid-template-columns:160px minmax(0,1fr);gap:26px}
+  .col-aside{display:none}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-inner{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:30px;padding:40px 20px}
+  .hero-visual{max-width:520px}
+  .news-list{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:24px}
+  .col-side{position:static}
+  .channel-list{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+  .channel-list li{margin:0}
+  .channel-list a{border-left:0;border:1px solid var(--line);border-radius:16px;padding:5px 12px;font-size:13px}
+  .side-title{margin-bottom:9px}
+  .side-note{display:none}
+}
+@media (max-width:740px){
+  .header-inner{gap:12px;padding:10px 16px}
+  .brand-name{font-size:17px}
+  .main-nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;gap:2px}
+  .main-nav a{font-size:13px;padding:5px 9px}
+  .search-box input{width:96px}
+  .hero h1{font-size:32px}
+  .hero-stats{gap:20px}
+  .hero-stats b{font-size:19px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .comment-grid{grid-template-columns:1fr}
+  .article{padding:20px 17px;font-size:14.4px}
+  .overview{padding:18px 17px;font-size:14.2px}
+  .update-list li{grid-template-columns:1fr;gap:3px;padding:11px 14px}
+  .update-list .u-tag{justify-self:start}
+  .news-item{grid-template-columns:88px 1fr;gap:11px}
+  .news-item img{width:88px;height:70px}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:24px;padding:30px 16px 20px}
+  .layout{padding:24px 16px 44px}
+  .section{margin-bottom:36px}
+}
+@media (max-width:400px){
+  .search-box{display:none}
+  .cat-grid{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice-bar">
+    <div class="notice-inner">
+      <span class="notice-dot" aria-hidden="true"></span>
+      <span>11 月 24 日新增 <b>9 组</b>「锈蚀肌理」微距条目 · 本周共更新 <b>34 条</b>拍摄参数与样张</span>
+      <a href="/#latest">查看更新清单 →</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="局部特写首页">
+        <svg class="brand-mark" viewBox="0 0 40 40" role="img" aria-label="局部特写标志：放大镜下的纹理">
+          <defs>
+            <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#d9a441"/>
+              <stop offset="1" stop-color="#8a6a2a"/>
+            </linearGradient>
+          </defs>
+          <rect x="1" y="1" width="38" height="38" rx="9" fill="#1a1e25" stroke="#3a4150"/>
+          <circle cx="17.5" cy="17" r="8.6" fill="none" stroke="url(#bg1)" stroke-width="2.4"/>
+          <line x1="24.2" y1="23.8" x2="31" y2="30.6" stroke="url(#bg1)" stroke-width="2.8" stroke-linecap="round"/>
+          <circle cx="17.5" cy="17" r="4.4" fill="none" stroke="#5fa8a0" stroke-width="1.2" opacity=".85"/>
+          <circle cx="17.5" cy="17" r="1.5" fill="#d9a441"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">局部特写</span>
+          <span class="brand-sub">MACRO&nbsp;DETAIL</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="主导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选条目</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#categories">分类</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">问答</a>
+        <a href="/#comments">评论</a>
+        <a href="/#news">资讯</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="search-box" role="search">
+          <label for="siteSearch" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">搜索条目</label>
+          <input id="siteSearch" type="search" placeholder="搜条目 / 器材 / 纹理" autocomplete="off">
+          <button type="button" id="searchBtn">查找</button>
+        </div>
+        <a class="btn-ghost" href="/#featured">订阅更新</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-eyebrow">微距 · 纹理 · 细节观察</span>
+        <h1>局部特写</h1>
+        <p class="hero-desc">把镜头推到最近，看花瓣脉络如何分叉、锈迹如何在铁面爬行、织物的经纬怎样起球。这里收录真实的微距拍摄条目、参数与样张，写给愿意为一个毫米停留的人。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="/#featured">进入精选条目</a>
+          <a class="btn-outline" href="/#guide">看拍摄路径</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>1,284</b><span>影像条目</span></div>
+          <div><b>37</b><span>本周新增</span></div>
+          <div><b>96</b><span>可复现参数组</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <span class="hero-tag">本周主打 · 1:1 放大</span>
+          <img src="https://picsum.photos/seed/jubutexie-hero01/800/600" width="800" height="600" alt="银杏叶脉逆光微距特写，主叶脉分出细密支脉" loading="eager">
+          <div class="hero-caption">
+            <b>银杏叶脉 · 逆光透射</b>
+            <span>100mm 微距 / f8 / 1/125s / 双柔光箱侧逆</span>
+          </div>
+        </div>
+        <div class="hero-grid-mini">
+          <img src="https://picsum.photos/seed/jubutexie-hero02/400/400" width="400" height="400" alt="生锈铁板表面的橙褐色锈蚀颗粒特写" loading="lazy">
+          <img src="https://picsum.photos/seed/jubutexie-hero03/400/400" width="400" height="400" alt="粗纺羊毛织物经纬线起球细节" loading="lazy">
+          <img src="https://picsum.photos/seed/jubutexie-hero04/400/400" width="400" height="400" alt="蜻蜓复眼六边形阵列微距特写" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+
+    <!-- 左频道索引 -->
+    <aside class="col-side" aria-label="频道索引">
+      <p class="side-title">频道索引</p>
+      <ul class="channel-list">
+        <li><a href="/#featured">植物脉络 <em>218</em></a></li>
+        <li><a href="/#featured">金属锈蚀 <em>164</em></a></li>
+        <li><a href="/#featured">织物纤维 <em>142</em></a></li>
+        <li><a href="/#featured">昆虫复眼 <em>121</em></a></li>
+        <li><a href="/#featured">水滴与冰晶 <em>109</em></a></li>
+        <li><a href="/#featured">纸张与油墨 <em>97</em></a></li>
+        <li><a href="/#featured">矿物结晶 <em>88</em></a></li>
+        <li><a href="/#featured">食物断面 <em>76</em></a></li>
+        <li><a href="/#latest">器材与灯位 <em>63</em></a></li>
+        <li><a href="/#deepdive">景深与堆栈 <em>52</em></a></li>
+      </ul>
+      <div class="side-note">
+        <b>本周观察主题</b>
+        锈蚀层的光泽变化：同一块铁板在 7 天内的氧化色阶记录，附逐日灯位图。
+      </div>
+    </aside>
+
+    <!-- 中主内容 -->
+    <div class="col-main">
+
+      <!-- 1 领域概览 -->
+      <section class="section" id="overview">
+        <div class="section-head">
+          <span class="idx">01</span>
+          <h2>局部特写领域概览</h2>
+          <span class="lead">300—500 字 · 方向与现状</span>
+        </div>
+        <div class="overview">
+          <p><strong>局部特写</strong>指的是把拍摄距离压缩到极限、让被摄物只留下局部信息的影像做法。它不等于单纯「放大」，而是主动做减法：一个叶片的边缘、一段焊缝的氧化层、一枚硬币的浮雕转角，都能成为独立画面。按题材分，常见方向有植物脉络、金属锈蚀、织物纤维、昆虫复眼、水滴与冰晶、纸张油墨、矿物结晶、食物断面八类，每一类对灯光和景深的要求都不同。</p>
+          <p>植物脉络强调透射光，逆光下叶肉的薄厚差异会直接变成明暗层次；金属锈蚀更依赖侧光角度，掠射光能把氧化颗粒的凸起拉出立体感；织物纤维的难点在于绒毛杂乱，需要小光圈加堆栈才能保住经纬结构。昆虫复眼属于活体题材，清晨低温时段最稳定，蜻蜓和食蚜蝇的六边形阵列在 5:1 放大倍率下才会显形。水滴与冰晶是可控题材，室内就能完成，但凝结速度决定了你有多少秒去对焦。</p>
+          <p>2026 年下半年，这个领域的明显变化是<strong>堆栈流程的平民化</strong>：机身内置焦点包围、后期自动对齐合成，让原本需要三脚架加滑轨的 30 张堆栈变成手持可做的操作。另一个变化是参数共享，越来越多条目会附上完整灯位图与放大倍率，让一次成功的局部特写变得可复现。本页收录的条目都按「题材—放大倍率—灯位—后期」四段式记录，便于横向比较。</p>
+        </div>
+      </section>
+
+      <!-- 2 精选条目 -->
+      <section class="section" id="featured">
+        <div class="section-head">
+          <span class="idx">02</span>
+          <h2>精选局部特写条目</h2>
+          <span class="lead">9 条 · 附参数与看点</span>
+        </div>
+        <div class="card-grid" id="cardGrid">
+
+          <article class="card" data-search="银杏叶脉 植物脉络 逆光 透射">
+            <div class="card-img">
+              <span class="card-type">植物脉络</span>
+              <img src="https://picsum.photos/seed/jubutexie-yinxing11/400/300" width="400" height="300" alt="银杏叶脉逆光透射微距样张" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>银杏叶脉 · 逆光透射组</h3>
+              <div class="tag-row"><span class="tag">逆光</span><span class="tag">1:1</span><span class="tag">双柔光</span></div>
+              <p>取秋季落地 3 天内的叶片，叶肉略失水后脉络对比最强。柔光箱从叶背 45° 打入，正面用白卡补光避免死黑，f8 保证主脉与支脉同时清晰。</p>
+              <div class="card-meta"><span>更新 11-24</span><span class="hot">收藏 1,842</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="铁板锈蚀 金属 侧光 氧化">
+            <div class="card-img">
+              <span class="card-type">金属锈蚀</span>
+              <img src="https://picsum.photos/seed/jubutexie-xiushi12/400/300" width="400" height="300" alt="铁板表面橙褐色锈蚀颗粒侧光特写" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>铁板锈蚀 · 七日色阶记录</h3>
+              <div class="tag-row"><span class="tag">掠射光</span><span class="tag">2:1</span><span class="tag">延时</span></div>
+              <p>同一块冷轧铁板在潮湿环境下的七天氧化过程，逐日固定机位与灯位。第 3 天开始出现橙红颗粒，第 6 天转为暗褐，色阶变化比形态变化更值得记录。</p>
+              <div class="card-meta"><span>更新 11-23</span><span class="hot">收藏 1,306</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="羊毛织物 纤维 起球 堆栈">
+            <div class="card-img">
+              <span class="card-type">织物纤维</span>
+              <img src="https://picsum.photos/seed/jubutexie-zhiwu13/400/300" width="400" height="300" alt="羊毛织物经纬线与起球绒毛微距样张" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>粗纺羊毛 · 经纬与起球</h3>
+              <div class="tag-row"><span class="tag">焦点堆栈</span><span class="tag">3:1</span><span class="tag">环形光</span></div>
+              <p>用 18 张堆栈把单根纤维到整片织物的纵深全部纳入景深。环形光正打会压平绒毛，改为双灯 30° 侧位后，起球颗粒的立体感明显提升。</p>
+              <div class="card-meta"><span>更新 11-22</span><span class="hot">收藏 987</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="蜻蜓复眼 昆虫 六边形 清晨">
+            <div class="card-img">
+              <span class="card-type">昆虫复眼</span>
+              <img src="https://picsum.photos/seed/jubutexie-fuyan14/400/300" width="400" height="300" alt="蜻蜓复眼六边形小眼阵列微距特写" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>蜻蜓复眼 · 六边形阵列</h3>
+              <div class="tag-row"><span class="tag">5:1</span><span class="tag">活体</span><span class="tag">清晨</span></div>
+              <p>日出后一小时内蜻蜓体温低、活动少，是最佳窗口。复眼的小眼数量随种类差异极大，本组记录到约 2.8 万个小眼，中心区域排列最规整。</p>
+              <div class="card-meta"><span>更新 11-21</span><span class="hot">收藏 1,554</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="冰晶 水滴 凝结 室内">
+            <div class="card-img">
+              <span class="card-type">水滴与冰晶</span>
+              <img src="https://picsum.photos/seed/jubutexie-bingjing15/400/300" width="400" height="300" alt="玻璃表面冰晶枝状生长微距样张" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>玻璃冰晶 · 枝状生长</h3>
+              <div class="tag-row"><span class="tag">冷台</span><span class="tag">4:1</span><span class="tag">暗场</span></div>
+              <p>在 -12℃ 冷台上让水汽在载玻片结晶，枝晶分叉速度约每分钟 0.4 毫米。暗场照明能让透明的冰晶边缘浮现，是室内最可控的一类局部特写。</p>
+              <div class="card-meta"><span>更新 11-20</span><span class="hot">收藏 1,102</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="纸张油墨 纤维 印刷 网点">
+            <div class="card-img">
+              <span class="card-type">纸张与油墨</span>
+              <img src="https://picsum.photos/seed/jubutexie-zhiyou16/400/300" width="400" height="300" alt="铜版纸印刷网点与纸纤维微距特写" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>铜版纸 · 印刷网点与纸纤维</h3>
+              <div class="tag-row"><span class="tag">同轴光</span><span class="tag">10:1</span><span class="tag">平面</span></div>
+              <p>同轴光能消除纸张表面反光，让 CMYK 网点与纸纤维同时显形。适合检验印刷质量，也适合做抽象纹理素材，网点角度差异一目了然。</p>
+              <div class="card-meta"><span>更新 11-19</span><span class="hot">收藏 764</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="矿物结晶 硫酸铜 晶体 偏振">
+            <div class="card-img">
+              <span class="card-type">矿物结晶</span>
+              <img src="https://picsum.photos/seed/jubutexie-kuangwu17/400/300" width="400" height="300" alt="硫酸铜晶体棱面与内部包裹体微距样张" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>硫酸铜晶体 · 棱面与包裹体</h3>
+              <div class="tag-row"><span class="tag">偏振光</span><span class="tag">6:1</span><span class="tag">暗场</span></div>
+              <p>饱和溶液缓慢蒸发 5 天得到的单晶，棱面平整度决定反光质量。交叉偏振后内部应力纹路显现，蓝绿色调随厚度变化，是很耐看的局部题材。</p>
+              <div class="card-meta"><span>更新 11-18</span><span class="hot">收藏 893</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="咖啡豆 食物断面 烘焙 断面">
+            <div class="card-img">
+              <span class="card-type">食物断面</span>
+              <img src="https://picsum.photos/seed/jubutexie-shidu18/400/300" width="400" height="300" alt="深烘咖啡豆中缝断面与油脂分布特写" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>深烘咖啡豆 · 中缝断面</h3>
+              <div class="tag-row"><span class="tag">断面</span><span class="tag">3:1</span><span class="tag">侧光</span></div>
+              <p>沿中缝切开后，烘焙度差异直接体现在孔洞大小与油脂分布上。深烘豆孔壁薄、油膜厚，浅烘豆结构致密，两组并置对比比单看一张更有信息量。</p>
+              <div class="card-meta"><span>更新 11-17</span><span class="hot">收藏 681</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-search="蝴蝶翅膀 鳞片 结构色 反光">
+            <div class="card-img">
+              <span class="card-type">昆虫复眼</span>
+              <img src="https://picsum.photos/seed/jubutexie-linpian19/400/300" width="400" height="300" alt="闪蝶翅膀鳞片叠瓦状排列微距特写" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>闪蝶翅膀 · 鳞片叠瓦结构</h3>
+              <div class="tag-row"><span class="tag">结构色</span><span class="tag">8:1</span><span class="tag">漫射光</span></div>
+              <p>蓝色并非色素而是鳞片微结构对光的干涉，角度一变颜色即偏移。用大面积漫射光避免高光爆点，才能拍出叠瓦状排列的完整层次。</p>
+              <div class="card-meta"><span>更新 11-16</span><span class="hot">收藏 1,271</span></div>
+            </div>
+          </article>
+
+        </div>
+        <div class="no-result" id="noResult">没有找到匹配的条目，换个关键词试试，例如「锈蚀」「叶脉」「堆栈」。</div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="section" id="latest">
+        <div class="section-head">
+          <span class="idx">03</span>
+          <h2>最新更新与拍摄动态</h2>
+          <span class="lead">近 30 天 · 10 条</span>
+        </div>
+        <ul class="update-list">
+          <li><time>今天 09:30</time><span><b>「锈蚀肌理 · 第 4 组」</b> <span class="u-desc">上线，补入 18 张堆栈原片与灯位俯视图</span></span><span class="u-tag">新条目</span></li>
+          <li><time>今天 08:10</time><span><b>「银杏叶脉逆光组」</b> <span class="u-desc">更新后期流程，新增去黄反相步骤</span></span><span class="u-tag">参数修订</span></li>
+          <li><time>昨天 21:40</time><span><b>「蜻蜓复眼」</b> <span class="u-desc">补充清晨窗口时间表，按纬度分三档</span></span><span class="u-tag">内容补充</span></li>
+          <li><time>昨天 15:05</time><span><b>「玻璃冰晶枝晶」</b> <span class="u-desc">新增 -8℃ 与 -15℃ 两组对照样张</span></span><span class="u-tag">样张</span></li>
+          <li><time>11 月 23 日</time><span><b>「铜版纸网点」</b> <span class="u-desc">补入 175 线 / 300 线印刷对比</span></span><span class="u-tag">对比组</span></li>
+          <li><time>11 月 22 日</time><span><b>「硫酸铜单晶」</b> <span class="u-desc">结晶周期从 5 天修正为 4—6 天区间</span></span><span class="u-tag">勘误</span></li>
+          <li><time>11 月 20 日</time><span><b>「粗纺羊毛起球」</b> <span class="u-desc">堆栈张数由 12 张增至 18 张并重制</span></span><span class="u-tag">重制</span></li>
+          <li><time>11 月 18 日</time><span><b>「深烘咖啡豆断面」</b> <span class="u-desc">新增浅烘、中烘并置对照图</span></span><span class="u-tag">新样张</span></li>
+          <li><time>11 月 15 日</time><span><b>器材页「百微镜头横评」</b> <span class="u-desc">加入 2026 年新款 105mm 实测数据</span></span><span class="u-tag">器材</span></li>
+          <li><time>11 月 12 日</time><span><b>「闪蝶鳞片」</b> <span class="u-desc">新增角度偏移 15° 的色彩变化记录</span></span><span class="u-tag">补充</span></li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="section" id="categories">
+        <div class="section-head">
+          <span class="idx">04</span>
+          <h2>按题材进入分类</h2>
+          <span class="lead">8 个方向</span>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#featured"><b>植物脉络</b><span>叶脉 / 花瓣 / 种子表面</span></a>
+          <a class="cat-item" href="/#featured"><b>金属锈蚀</b><span>氧化层 / 焊缝 / 划痕</span></a>
+          <a class="cat-item" href="/#featured"><b>织物纤维</b><span>经纬 / 绒毛 / 起球</span></a>
+          <a class="cat-item" href="/#featured"><b>昆虫复眼</b><span>小眼阵列 / 鳞片 / 口器</span></a>
+          <a class="cat-item" href="/#featured"><b>水滴与冰晶</b><span>凝结 / 枝晶 / 霜花</span></a>
+          <a class="cat-item" href="/#featured"><b>纸张与油墨</b><span>网点 / 纤维 / 压痕</span></a>
+          <a class="cat-item" href="/#featured"><b>矿物结晶</b><span>棱面 / 包裹体 / 应力纹</span></a>
+          <a class="cat-item" href="/#featured"><b>食物断面</b><span>烘焙 / 切面 / 孔隙</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="section" id="deepdive">
+        <div class="section-head">
+          <span class="idx">05</span>
+          <h2>深度解析：八类题材的差异与判断维度</h2>
+          <span class="lead">600—900 字</span>
+        </div>
+        <div class="article">
+          <h3>为什么「放大」不等于「局部特写」</h3>
+          <p>很多人第一次尝试微距，会把整个花蕊塞进画面，结果信息量反而下降。局部特写的核心是<strong>取舍</strong>：画面里只保留一到两个结构特征，其余全部舍弃。判断一张局部特写是否成立，看三件事——结构是否清楚、层次是否足够、边缘是否交代干净。结构清楚指被摄物的组织方式能被看懂；层次指的是从最亮到最暗有没有过渡；边缘干净指画面四角没有无意义的杂物干扰。</p>
+
+          <h3>植物与昆虫：活体题材的时间成本</h3>
+          <p>植物脉络和昆虫复眼都属于「窗口很短」的题材，但短的原因不同。</p>
+          <ul>
+            <li><b>植物脉络</b>：叶片离体后 2—6 小时是透射光效果最好的阶段，失水过多会卷边，过少则叶肉太厚、脉络发闷。剪下后夹在两张吸水纸之间，可以延长可用窗口。</li>
+            <li><b>昆虫复眼</b>：受体温影响，清晨 6—8 点最稳，正午几乎无法靠近。若在室内拍摄，冰袋降温 3 分钟即可获得约 40 秒的静止时间，超时需重新降温。</li>
+          </ul>
+          <p>两类题材的共同点是：准备时间远大于拍摄时间。一组 20 张的复眼样张，实际按下快门的时长往往不到 5 分钟。</p>
+
+          <h3>矿物与冰晶：可控题材的变量控制</h3>
+          <p>硫酸铜结晶、玻璃冰晶属于室内可控题材，难点不在对焦而在<strong>变量隔离</strong>。同一批实验只改一个条件：只改降温速率，或只改溶液浓度。否则色彩和形态同时变化，样张之间无法比较。经验值是降温速率控制在每分钟 0.5℃ 以内，晶体棱面最规整；蒸发法得到的单晶比快速冷却法更透明。</p>
+
+          <h3>金属与纸张：平面题材的光线决定一切</h3>
+          <p>锈蚀铁板和印刷网点都是接近平面的被摄物，形态信息有限，全部信息量压在光线与质感上。锈蚀用掠射光（入射角 10°—20°）能最大化颗粒凸起；纸张网点用同轴光消除表面反光，让油墨层与纤维层分离。这两类的参数一旦确定就可以批量复用，是最适合建立个人模板的方向。</p>
+
+          <h3>堆栈张数的判断依据</h3>
+          <p>焦点堆栈不是张数越多越好。合理张数取决于放大倍率与允许的模糊圈：</p>
+          <ul>
+            <li>1:1 至 2:1，单张景深约 0.2—0.5mm，8—12 张足够覆盖 2mm 纵深；</li>
+            <li>3:1 至 5:1，单张景深降到 0.1mm 以下，需要 18—30 张；</li>
+            <li>8:1 以上，建议改用滑轨微调，步进 20—40 微米，张数按总纵深除以步进量估算。</li>
+          </ul>
+          <p>张数过多会带来边缘错位和噪点累积，合成后反而更脏。先按上表估算，再补拍 2—3 张余量即可。</p>
+
+          <h3>怎么判断一个条目值不值得跟着拍</h3>
+          <p>看三点：有没有完整灯位图、有没有标注放大倍率、有没有说明后期步骤。三者齐全的条目，复现成功率通常在七成以上；缺灯位图的条目只能当参考，缺放大倍率的条目无法判断景深难度。这也是本页条目统一按四段式记录的原因。</p>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="section" id="guide">
+        <div class="section-head">
+          <span class="idx">06</span>
+          <h2>局部特写的观看与上手路径</h2>
+          <span class="lead">5 步 · 从看到拍</span>
+        </div>
+        <ol class="steps">
+          <li><b>先看结构清楚的条目</b>植物脉络和印刷网点这两类结构最规整，适合建立「什么叫层次」的判断标准。先看 20 张，再动手。</li>
+          <li><b>再挑一个可控题材练手</b>室内冰晶或硫酸铜结晶，变量少、可重来。把灯位、距离、光圈固定下来，只改一个参数。</li>
+          <li><b>用堆栈解决景深</b>3:1 以上必然景深不足，先学会拍 12 张的堆栈，再考虑加张数。合成失败多数是对齐问题，不是张数问题。</li>
+          <li><b>把光线当主要变量</b>同一被摄物换三种光位各拍一组：正打、侧 30°、掠射 15°。三组并置后，你会发现自己更偏好哪种质感。</li>
+          <li><b>建立自己的参数模板</b>把「题材—倍率—灯位—光圈—张数」记成一行，重复使用。模板稳定后，拍摄时间能压缩一半以上。</li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="section" id="faq">
+        <div class="section-head">
+          <span class="idx">07</span>
+          <h2>常见问题</h2>
+          <span class="lead">6 问</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>第一次拍局部特写，从哪类题材开始比较好？</summary>
+            <div class="faq-body">建议从植物脉络或印刷网点开始。两者都是平面结构，对灯位宽容度高，景深压力小，1:1 倍率加 f8 就能出片。等你能稳定拍出层次，再进入 3:1 以上的题材。</div>
+          </details>
+          <details>
+            <summary>微距镜头 60mm、100mm、180mm 有什么区别？</summary>
+            <div class="faq-body">主要差在工作距离。60mm 工作距离短，适合翻拍平面；100mm 是通用选择，1:1 时工作距离约 15cm；180mm 工作距离最长，拍活体昆虫不易惊扰，但体积重量明显增加，手持难度更高。</div>
+          </details>
+          <details>
+            <summary>焦点堆栈一般要拍多少张才够？</summary>
+            <div class="faq-body">按放大倍率估算：1:1 至 2:1 用 8—12 张，3:1 至 5:1 用 18—30 张，8:1 以上按步进 20—40 微米计算总纵深。张数过多会累积噪点和边缘错位，宁少勿滥。</div>
+          </details>
+          <details>
+            <summary>拍昆虫复眼为什么总糊？</summary>
+            <div class="faq-body">多数是温度问题。昆虫体温升高后活动频繁，5:1 倍率下景深不足 0.1mm，轻微移动就会失焦。清晨 6—8 点拍摄，或室内冰袋降温 3 分钟后取 40 秒窗口，成功率会明显提升。</div>
+          </details>
+          <details>
+            <summary>金属锈蚀用什么光才能拍出颗粒感？</summary>
+            <div class="faq-body">掠射光，入射角控制在 10°—20°。光线越贴近表面，氧化颗粒的凸起阴影越长，立体感越强。正面平打会把锈层压成一片色块，几乎没有质感。</div>
+          </details>
+          <details>
+            <summary>局部特写和普通微距照片的评判标准一样吗？</summary>
+            <div class="faq-body">不完全一样。普通微距看重主体完整与背景虚化，局部特写更看重结构可读性、明暗层次和边缘干净程度。一张只拍到漂亮虚化的照片，在局部特写里通常信息量不足。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="section" id="comments">
+        <div class="section-head">
+          <span class="idx">08</span>
+          <h2>拍友评论</h2>
+          <span class="lead">14 条 · 近 30 天</span>
+        </div>
+        <div class="comment-grid">
+          <div class="comment"><div class="comment-head"><span class="avatar">叶</span><b>叶脉收集者</b><time>今天 10:12</time></div><p>银杏那组把去黄反相讲清楚了，我之前的透射片一直发闷，原来是白平衡没锁。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">锈</span><b>锈色可餐</b><time>今天 08:47</time></div><p>七日色阶记录很实用，但第 5 天到第 6 天的跳变有点突然，是不是中间补拍过？</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">羊</span><b>羊毛毡小王</b><time>昨天 22:31</time></div><p>18 张堆栈出来的经纬确实干净，我用 12 张总有边缘发虚，看来还是得加张数。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">复</span><b>复眼观察员</b><time>昨天 19:05</time></div><p>清晨窗口表按纬度分档这点很细。南方 11 月 7 点后基本就拍不了了，蜻蜓开始动。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">冰</span><b>冰晶控</b><time>昨天 14:20</time></div><p>-8℃ 和 -15℃ 对照看完，低温枝晶更细但更容易断，我更喜欢 -8℃ 那组的形态。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">纸</span><b>纸边墨点</b><time>11 月 24 日</time></div><p>同轴光那部分讲得对，我以前用环形光拍网点，全是反光斑，根本看不到结构。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">晶</span><b>晶体养成记</b><time>11 月 23 日</time></div><p>硫酸铜结晶 4—6 天这个区间比原来准确。我这边湿度高，确实要 6 天才够大。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">豆</span><b>深烘不加糖</b><time>11 月 22 日</time></div><p>咖啡豆断面三组并置挺有说服力，深烘孔壁薄这点第一次从图上看出来。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">蝶</span><b>闪蝶蓝</b><time>11 月 21 日</time></div><p>角度偏移 15° 的色彩变化记录很值得看，但 8:1 的器材门槛对普通玩家还是偏高。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">微</span><b>微距新手阿岚</b><time>11 月 20 日</time></div><p>看完指南第一步去拍了印刷网点，第一次拍到结构清楚的片子，信心有了。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">光</span><b>光位练习生</b><time>11 月 18 日</time></div><p>掠射光 10°—20° 这个数值很有用，之前一直凭感觉，现在有参照了。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">堆</span><b>堆栈老张</b><time>11 月 16 日</time></div><p>张数判断表基本认同，不过 8:1 以上我用电动滑轨步进 25 微米，效果比手动稳。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">露</span><b>露水未干</b><time>11 月 14 日</time></div><p>水滴凝结那段有点短，希望补一下不同湿度下的凝结速度对照。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">木</span><b>木纹与年轮</b><time>11 月 12 日</time></div><p>整体偏实用，但植物类条目里木纹方向的收录偏少，期待补木材横切面的内容。</p></div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="section" id="news">
+        <div class="section-head">
+          <span class="idx">09</span>
+          <h2>相关资讯</h2>
+          <span class="lead">6 条 · 2026 年 11 月</span>
+        </div>
+        <div class="news-list">
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/jubutexie-news01/600/400" width="600" height="400" alt="锈蚀肌理条目新增堆栈原片展示" loading="lazy">
+            <div>
+              <time>2026-11-25</time>
+              <h3>「锈蚀肌理」第 4 组上线 18 张堆栈原片</h3>
+              <p>新增逐张灯位俯视图与合成中间文件，可直接对照自己的堆栈流程。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/jubutexie-news02/600/400" width="600" height="400" alt="百微镜头横评更新现场" loading="lazy">
+            <div>
+              <time>2026-11-22</time>
+              <h3>百微镜头横评加入 2026 款 105mm 实测</h3>
+              <p>在 1:1 与 2:1 两档倍率下对比边缘锐度与色散，结论已并入器材页。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/jubutexie-news03/600/400" width="600" height="400" alt="冰晶冷台拍摄工作台" loading="lazy">
+            <div>
+              <time>2026-11-19</time>
+              <h3>室内冰晶题材升温，冷台方案被大量复用</h3>
+              <p>近两周冰晶条目收藏量增长明显，-8℃ 档位的枝晶形态讨论最多。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/jubutexie-news04/600/400" width="600" height="400" alt="焦点堆栈合成软件界面局部" loading="lazy">
+            <div>
+              <time>2026-11-17</time>
+              <h3>焦点包围内置化后，堆栈门槛明显下降</h3>
+              <p>多款机身支持机内包围与合成，手持 12 张堆栈成为常见操作，教程需求上升。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/jubutexie-news05/600/400" width="600" height="400" alt="闪蝶翅膀鳞片结构色对比图" loading="lazy">
+            <div>
+              <time>2026-11-15</time>
+              <h3>闪蝶鳞片结构色条目补入角度偏移记录</h3>
+              <p>15° 偏移下色彩由蓝转紫，为结构色拍摄提供了可复现的光位参考。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/jubutexie-news06/600/400" width="600" height="400" alt="硫酸铜结晶实验记录本与晶体" loading="lazy">
+            <div>
+              <time>2026-11-11</time>
+              <h3>硫酸铜结晶周期数据修订为 4—6 天</h3>
+              <p>据多地读者反馈，湿度对结晶速度影响显著，原 5 天固定值改为区间表述。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="section" id="related">
+        <div class="section-head">
+          <span class="idx">10</span>
+          <h2>延伸方向</h2>
+          <span class="lead">8 个标签</span>
+        </div>
+        <div class="rel-tags">
+          <a href="/#featured">木材横切面年轮</a>
+          <a href="/#featured">羽毛羽枝结构</a>
+          <a href="/#featured">贝壳生长纹</a>
+          <a href="/#featured">胶片齿孔与乳剂层</a>
+          <a href="/#featured">陶瓷釉面开片</a>
+          <a href="/#deepdive">超景深合成流程</a>
+          <a href="/#latest">环形光与同轴光对比</a>
+          <a href="/#guide">手持微距稳定技巧</a>
+        </div>
+      </section>
+
+      <!-- 11 热门榜单 -->
+      <section class="section" id="ranking">
+        <div class="section-head">
+          <span class="idx">11</span>
+          <h2>本月收藏榜</h2>
+          <span class="lead">截至 11-25</span>
+        </div>
+        <ol class="rank-list">
+          <li><span class="rank-no">1</span><span class="rank-name"><b>银杏叶脉 · 逆光透射组</b><span>植物脉络</span></span><span class="rank-score">收藏 1,842</span></li>
+          <li><span class="rank-no">2</span><span class="rank-name"><b>蜻蜓复眼 · 六边形阵列</b><span>昆虫复眼</span></span><span class="rank-score">收藏 1,554</span></li>
+          <li><span class="rank-no">3</span><span class="rank-name"><b>铁板锈蚀 · 七日色阶记录</b><span>金属锈蚀</span></span><span class="rank-score">收藏 1,306</span></li>
+          <li><span class="rank-no">4</span><span class="rank-name"><b>闪蝶翅膀 · 鳞片叠瓦结构</b><span>昆虫复眼</span></span><span class="rank-score">收藏 1,271</span></li>
+          <li><span class="rank-no">5</span><span class="rank-name"><b>玻璃冰晶 · 枝状生长</b><span>水滴与冰晶</span></span><span class="rank-score">收藏 1,102</span></li>
+          <li><span class="rank-no">6</span><span class="rank-name"><b>粗纺羊毛 · 经纬与起球</b><span>织物纤维</span></span><span class="rank-score">收藏 987</span></li>
+          <li><span class="rank-no">7</span><span class="rank-name"><b>硫酸铜晶体 · 棱面与包裹体</b><span>矿物结晶</span></span><span class="rank-score">收藏 893</span></li>
+          <li><span class="rank-no">8</span><span class="rank-name"><b>铜版纸 · 印刷网点与纸纤维</b><span>纸张与油墨</span></span><span class="rank-score">收藏 764</span></li>
+        </ol>
+      </section>
+
+    </div>
+
+    <!-- 右辅助栏 -->
+    <aside class="col-aside" aria-label="辅助信息">
+      <div class="aside-block">
+        <h3>编辑热榜</h3>
+        <ul class="hot-list">
+          <li><a href="/#featured"><i>01</i>银杏叶脉逆光组</a></li>
+          <li><a href="/#featured"><i>02</i>蜻蜓复眼六边形阵列</a></li>
+          <li><a href="/#featured"><i>03</i>铁板锈蚀七日色阶</a></li>
+          <li><a href="/#featured"><i>04</i>闪蝶鳞片叠瓦结构</a></li>
+          <li><a href="/#featured"><i>05</i>玻璃冰晶枝状生长</a></li>
+          <li><a href="/#featured"><i>06</i>硫酸铜晶体棱面</a></li>
+        </ul>
+      </div>
+      <div class="aside-block">
+        <h3>本周时间线</h3>
+        <ul class="aside-timeline">
+          <li><b>锈蚀第 4 组上线</b><time>11 月 25 日 09:30</time></li>
+          <li><b>银杏后期流程修订</b><time>11 月 25 日 08:10</time></li>
+          <li><b>复眼窗口表补充</b><time>11 月 24 日 21:40</time></li>
+          <li><b>冰晶低温对照样张</b><time>11 月 24 日 15:05</time></li>
+          <li><b>网点印刷线数对比</b><time>11 月 23 日</time></li>
+        </ul>
+      </div>
+      <div class="aside-block">
+        <h3>热度标签</h3>
+        <div class="rel-tags">
+          <a href="/#featured">掠射光</a>
+          <a href="/#featured">偏振光</a>
+          <a href="/#deepdive">焦点堆栈</a>
+          <a href="/#featured">透射光</a>
+          <a href="/#featured">同轴光</a>
+          <a href="/#latest">暗场照明</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="/#top">
+        <svg class="brand-mark" viewBox="0 0 40 40" role="img" aria-label="局部特写标志">
+          <rect x="1" y="1" width="38" height="38" rx="9" fill="#1a1e25" stroke="#3a4150"/>
+          <circle cx="17.5" cy="17" r="8.6" fill="none" stroke="#d9a441" stroke-width="2.4"/>
+          <line x1="24.2" y1="23.8" x2="31" y2="30.6" stroke="#d9a441" stroke-width="2.8" stroke-linecap="round"/>
+          <circle cx="17.5" cy="17" r="1.5" fill="#5fa8a0"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">局部特写</span>
+          <span class="brand-sub">MACRO&nbsp;DETAIL</span>
+        </span>
+      </a>
+      <p>记录毫米级的结构与质感。以题材、放大倍率、灯位、后期四段式收录微距条目，供拍摄者对照复现。</p>
+    </div>
+    <div class="footer-col">
+      <h4>题材</h4>
+      <ul>
+        <li><a href="/#featured">植物脉络</a></li>
+        <li><a href="/#featured">金属锈蚀</a></li>
+        <li><a href="/#featured">织物纤维</a></li>
+        <li><a href="/#featured">昆虫复眼</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>方法</h4>
+      <ul>
+        <li><a href="/#deepdive">景深与堆栈</a></li>
+        <li><a href="/#guide">上手路径</a></li>
+        <li><a href="/#latest">器材与灯位</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>社区</h4>
+      <ul>
+        <li><a href="/#comments">拍友评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#ranking">本月收藏榜</a></li>
+        <li><a href="/#related">延伸方向</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>数据说明：条目参数与样张由社区拍摄者提交并经编辑核对，收藏数为站内统计，统计截止 2026-11-25。</span>
+    <span>© 2026 局部特写影像志 · 内容版权归原作者所有</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var input = document.getElementById('siteSearch');
+  var btn = document.getElementById('searchBtn');
+  var grid = document.getElementById('cardGrid');
+  var noResult = document.getElementById('noResult');
+  if (!grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+
+  function runSearch() {
+    var q = (input.value || '').trim().toLowerCase();
+    if (!q) {
+      cards.forEach(function (c) { c.style.display = ''; });
+      noResult.classList.remove('show');
+      return;
+    }
+    var hit = 0;
+    cards.forEach(function (c) {
+      var text = (c.getAttribute('data-search') || '') + ' ' + c.textContent;
+      var match = text.toLowerCase().indexOf(q) !== -1;
+      c.style.display = match ? '' : 'none';
+      if (match) hit++;
+    });
+    noResult.classList.toggle('show', hit === 0);
+  }
+
+  btn.addEventListener('click', runSearch);
+  input.addEventListener('input', runSearch);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); runSearch(); }
+  });
+})();
+</script>
+</body>
+              </html>
